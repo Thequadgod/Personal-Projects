@@ -1,32 +1,45 @@
-<!DOCUTYPE html>
+<!DOCTYPE html>
+
 <html>
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To do list</title>
+    <title>Pace calculator</title>
     <link rel="stylesheet" href="pace.css">
     
 </head>
 <body>
     <main>
-        
-        <div style="position: fixed;">
+        <br>
+        <div style="">
             <input type="text" id="minu" size="3">
             <input type="text" id="sec" size="6">
         </div>
+        <br>
+        <div class="notOther">
+            <label></label>
+            <input type="radio" value="Marathon"  id="mar" name="type"  >   Marathon <br>
+            <input type="radio" value="Half"      id="half" name="type" >   Half Marathon<br>
+            <input type="radio" value="10k"       id="10k" name="type"  >   10k<br>
+            <input type="radio" value="8k"        id="8k" name="type"   >   8k<br>
+            <input type="radio" value="5k"        id="5k" name="type"   >   5k <br>
+        </div>
+        <div class="other">
+            <br>
+            <input type="radio" id="other" name="type">other 
+        </div>
+        
         <div>
-            <input type="radio" id="mar" value="Marathon">
-            <input type="radio" id="mar" value="Marathon">
-            <input type="radio" id="mar" value="Marathon">
-            <input type="radio" id="mar" value="Marathon">
-            <input type="radio" id="mar" value="Marathon">
+            <input type="text" id="otherTxt" size="4" disabled >
+            <input type="button" id="test">
         </div>
         
         
     </main>
-    
-    
-    <script src="pace.js"> </script>
-    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="pace.js"></script>
+
+
     </body>
 </html>
