@@ -3,7 +3,6 @@
 
 $(document).ready( () => {
     
-    //let other = $("#other").val();
     /*
     let foo = document.querySelector('input[name="type"]').val;
      $(":radio").change( () => {
@@ -43,13 +42,38 @@ $(document).ready( () => {
     */
     
     
-   // console.log(other);
+    /*
+    $("#toggle").click( () => {
+       console.log("checkbox"); 
+        if (toggle.checked == true){
+            console.log("checked");
+                $("#otherTxt").removeAttr("disabled");
+        }else{
+            console.log("unchecked");
+                $("#otherTxt").attr("disabled", "disabled");
+        }
+    });// emd checkbox click
+    */
+  
+    
+    
     $("#test").click( () => {
-                    let distance = $("#type").val();
-
+            let distance = $("#type").val();
             console.log(distance);
-            //    console.log(radioButton);
-                   // console.log(foo);
-                  });   
+             });   
+    
+    $("#type").click( () => {
+                      let distance = $("#type").val();
+
+        if ((distance) == "other"){
+                 $("#otherTxt").removeAttr("disabled");
+        }else {
+            $("#otherTxt").attr("disabled", "disabled");
+        }
+                     
+            });
+    
+    
+    
     
 });// end ready
