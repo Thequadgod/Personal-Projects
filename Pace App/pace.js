@@ -58,12 +58,20 @@ $(document).ready( () => {
     
     
     $("#test").click( () => {
-            let distance = $("#type").val();
-            console.log(distance);
-             });   
+        //let isValid = true;
+        //let distance = $("#type").val();
+       // console.log(distance);
+        let foo = $("#minu").val();
+        /*
+        if (isNaN(foo))
+            isValid = false;   
+        console.log(foo);
+        */
+         });   
+         
     
     $("#type").click( () => {
-                      let distance = $("#type").val();
+        let distance = $("#type").val();
 
         if ((distance) == "other"){
                  $("#otherTxt").removeAttr("disabled");
@@ -74,6 +82,10 @@ $(document).ready( () => {
             });
     
     
-    
+    /*
+    if (isValid == false) {
+        event.preventDefault();
+    }
+    */
     
 });// end ready
