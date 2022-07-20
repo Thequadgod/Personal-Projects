@@ -61,12 +61,28 @@ $(document).ready( () => {
         //let isValid = true;
         //let distance = $("#type").val();
        // console.log(distance);
-        let foo = $("#minu").val();
+        let foo = $("#hour").val();
+        let foo1 = $("#minu").val();
+        let foo2 = $("#sec").val();
         /*
         if (isNaN(foo))
             isValid = false;   
         console.log(foo);
         */
+        
+        let bar = parseInt(foo);
+        let bar1 = parseInt(foo1);
+        let bar2 = parseInt(foo2);
+        let bar3 = parseInt(foo3);
+        
+        console.log(foo);
+        console.log(foo1);
+        console.log(foo2);
+        var foo3 = foo + foo1 + foo2;
+        console.log(foo3);
+        console.log(bar);
+        console.log(bar1);
+        console.log(bar3);
          });   
          
     
