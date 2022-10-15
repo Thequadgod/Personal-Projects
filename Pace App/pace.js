@@ -2,7 +2,7 @@
 
 
 $(document).ready( () => {
-    
+    var totalK = 0;
     /*
     let foo = document.querySelector('input[name="type"]').val;
      $(":radio").change( () => {
@@ -54,37 +54,88 @@ $(document).ready( () => {
         }
     });// emd checkbox click
     */
-  
+  /*
+       function time(hour, minu, sec)
+        {
+            if (hour == 0){
+                return hour;
+            } else {
+                console.log(minu);
+                console.log(hour);
+                minu =  (hour * 60) + +minu;
+                sec =   (minu * 60) + +sec;
+                console.log("minutes =",minu);
+                console.log("seconds =",sec);
+                console.log("hours",hour);
+                return hour,minu,sec;
+           
+            }
+            
+        }
+    */
     
+     
     
     $("#test").click( () => {
-        //let isValid = true;
-        //let distance = $("#type").val();
-       // console.log(distance);
-        let foo = $("#hour").val();
-        let foo1 = $("#minu").val();
-        let foo2 = $("#sec").val();
+        //var totalK = 0;
+
+        var distance = document.getElementById("type").value;
+        console.log(distance);
+        //convertD(distance);
+
+        console.log(totalK);
         /*
-        if (isNaN(foo))
-            isValid = false;   
-        console.log(foo);
+        const selectDiance = (distance) => {
+            switch(distance){
+                case "10k":
+                    
+                    return console.log("case 10k")
+            }
+        }
         */
+         const time = new time(0,0,0,hour,minu,sec);
+      
         
-        let bar = parseInt(foo);
-        let bar1 = parseInt(foo1);
-        let bar2 = parseInt(foo2);
-        let bar3 = parseInt(foo3);
+        var hour = document.getElementById("hour").value;
+        var minu = document.getElementById("minu").value;
+        var sec = document.getElementById("sec").value;
+        //time(hour,minu,sec);
+        minu =  (hour * 60) + +minu;
+        sec =   (minu * 60) + +sec;
+        console.log("minutes =",minu ,sec,hour);
+        console.log(time);
+        const    output = minu / (convertD(distance)) ;
+        console.log(output);
         
-        console.log(foo);
-        console.log(foo1);
-        console.log(foo2);
-        var foo3 = foo + foo1 + foo2;
-        console.log(foo3);
-        console.log(bar);
-        console.log(bar1);
-        console.log(bar3);
+        //console.log(foo);
+
+        //var total = +hour + +minu + +sec;
+        
+     
+        //console.log(total);
+        
          });   
-         
+         function convertD(distance){
+        if (distance == "10k"){
+            //var totalK = 0;
+            console.log("11k");
+            return totalK = 10;
+        } else if (distance == "5k"){
+            console.log("5k", totalK);
+            return totalK = 5;
+              
+        } else if (distance == "8k"){
+            console.log("8k");
+            return totalK = 8;
+        } else if (distance == "Half"){
+            console.log("Half");
+            return totalK = 22.2;
+        } else if (distance == "Marathon"){
+            console.log("Marathon");
+            return totalK = 44.4;
+        }
+        console.log(distance, totalK);
+        }
     
     $("#type").click( () => {
         let distance = $("#type").val();
