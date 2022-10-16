@@ -93,7 +93,7 @@ $(document).ready( () => {
             }
         }
         */
-         const time = new time(0,0,0,hour,minu,sec);
+        // const time = new time(0,0,0,hour,minu,sec);
       
         
         var hour = document.getElementById("hour").value;
@@ -103,10 +103,13 @@ $(document).ready( () => {
         minu =  (hour * 60) + +minu;
         sec =   (minu * 60) + +sec;
         console.log("minutes =",minu ,sec,hour);
-        console.log(time);
+        //console.log(time);
         const    output = minu / (convertD(distance)) ;
         console.log(output);
-        
+        document.getElementById("result").textContent = output;
+        /*
+            fix time so 80 seconds / 60 is 1 minute 20 seconds
+        */
         //console.log(foo);
 
         //var total = +hour + +minu + +sec;
