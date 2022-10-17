@@ -109,6 +109,13 @@ $(document).ready( () => {
         document.getElementById("result").textContent = output;
         /*
             fix time so 80 seconds / 60 is 1 minute 20 seconds
+            
+            
+            
+            var totalMinutes = hours * 60 + minutes + seconds / 60,
+		pace = totalMinutes / miles,
+		paceMinutes = Math.floor(pace),
+		paceSeconds = Math.round((pace - paceMinutes) * 60);
         */
         //console.log(foo);
 
