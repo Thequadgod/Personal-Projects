@@ -81,19 +81,7 @@ $(document).ready( () => {
 
         var distance = document.getElementById("type").value;
         console.log(distance);
-        //convertD(distance);
-
         console.log(totalK);
-        /*
-        const selectDiance = (distance) => {
-            switch(distance){
-                case "10k":
-                    
-                    return console.log("case 10k")
-            }
-        }
-        */
-        // const time = new time(0,0,0,hour,minu,sec);
       
         
         var hour = document.getElementById("hour").value;
@@ -116,10 +104,10 @@ $(document).ready( () => {
 		var paceSeconds = Math.round((output - paceMinutes) * 60);
         console.log(paceMinutes, paceSeconds);
         
-        let colon = ":";
-        let paceSM = paceMinutes.toString();
-        let paceS = paceSeconds.toString();
-        let final = paceSM.concat(colon,paceS);
+        let paceMinString = paceMinutes.toString();
+        let paceSecondString = paceSeconds.toString();
+        
+        let final = paceMinString + ":" + paceSecondString;//paceSM.concat(colon,paceS);
         
         document.getElementById("result").innerText = final;
         
