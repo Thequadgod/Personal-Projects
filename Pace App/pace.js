@@ -104,19 +104,46 @@ $(document).ready( () => {
         sec =   (minu * 60) + +sec;
         console.log("minutes =",minu ,sec,hour);
         //console.log(time);
+        
+        
         const    output = minu / (convertD(distance)) ;
+        
+        
         console.log(output);
         //document.getElementById("result").textContent = output;
         
-         var paceMinutes = Math.floor(output);
+        var paceMinutes = Math.floor(output);
 		var paceSeconds = Math.round((output - paceMinutes) * 60);
         console.log(paceMinutes, paceSeconds);
         
+        let colon = ":";
+        let paceSM = paceMinutes.toString();
+        let paceS = paceSeconds.toString();
+        let final = paceSM.concat(colon,paceS);
+        
+        document.getElementById("result").innerText = final;
+        
         // add seconds
+        
+        
+        
+        /*
+        ----------------What's Left to Do----------------
+        -Make user input
+        -make per mile as well
+        -make it so you can press enter to calculate
+        -make reset button
+        
+        
+        
+        -maybe add mph for paces
+        -maybe integrate the mpw calculator too
+        
+        */
         /*
             fix time so 80 seconds / 60 is 1 minute 20 seconds
             
-            
+             
             
             var totalMinutes = hours * 60 + minutes + seconds / 60,
 		pace = totalMinutes / miles,
@@ -139,7 +166,7 @@ $(document).ready( () => {
          function convertD(distance){
         if (distance == "10k"){
             //var totalK = 0;
-            console.log("11k");
+            console.log("10k");
             return totalK = 10;
         } else if (distance == "5k"){
             console.log("5k", totalK);
@@ -150,10 +177,10 @@ $(document).ready( () => {
             return totalK = 8;
         } else if (distance == "Half"){
             console.log("Half");
-            return totalK = 22.2;
+            return totalK = 21.0975;
         } else if (distance == "Marathon"){
             console.log("Marathon");
-            return totalK = 44.4;
+            return totalK = 42.195;
         }
         console.log(distance, totalK);
         }
