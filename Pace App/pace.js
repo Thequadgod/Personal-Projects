@@ -106,7 +106,13 @@ $(document).ready( () => {
         //console.log(time);
         const    output = minu / (convertD(distance)) ;
         console.log(output);
-        document.getElementById("result").textContent = output;
+        //document.getElementById("result").textContent = output;
+        
+         var paceMinutes = Math.floor(output);
+		var paceSeconds = Math.round((output - paceMinutes) * 60);
+        console.log(paceMinutes, paceSeconds);
+        
+        // add seconds
         /*
             fix time so 80 seconds / 60 is 1 minute 20 seconds
             
@@ -114,8 +120,13 @@ $(document).ready( () => {
             
             var totalMinutes = hours * 60 + minutes + seconds / 60,
 		pace = totalMinutes / miles,
-		paceMinutes = Math.floor(pace),
-		paceSeconds = Math.round((pace - paceMinutes) * 60);
+		
+        
+        if(paceSeconds < 10) {
+		paceSeconds = "0" + paceSeconds;
+	}
+    
+    paceText.textContent = "You need to run " + paceMinutes + ":" + paceSeconds + " minutes per mile.";
         */
         //console.log(foo);
 
