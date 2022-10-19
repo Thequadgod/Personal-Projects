@@ -39,9 +39,7 @@ $(document).ready( () => {
         console.log(distance);
         
     });//
-    */
-    
-    
+    */    
     /*
     $("#toggle").click( () => {
        console.log("checkbox"); 
@@ -87,14 +85,13 @@ $(document).ready( () => {
         var hour = document.getElementById("hour").value;
         var minu = document.getElementById("minu").value;
         var sec = document.getElementById("sec").value;
-        //time(hour,minu,sec);
+        
         minu =  (hour * 60) + +minu;
         sec =   (minu * 60) + +sec;
         console.log("minutes =",minu ,sec,hour);
-        //console.log(time);
         
         
-        const    output = minu / (convertD(distance)) ;
+        const    output = minu / (convertD(distance));
         
         
         console.log(output);
@@ -151,6 +148,10 @@ $(document).ready( () => {
         //console.log(total);
         
          });   
+    
+    function ktom(diistance){
+        
+    }
          function convertD(distance){
         if (distance == "10k"){
             //var totalK = 0;
