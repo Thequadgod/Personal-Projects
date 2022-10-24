@@ -3,6 +3,7 @@
 
 $(document).ready( () => {
     var totalK = 0;
+   // var totalM = 0;
     /*
     let foo = document.querySelector('input[name="type"]').val;
      $(":radio").change( () => {
@@ -74,12 +75,16 @@ $(document).ready( () => {
     
      
     
+    
+    
+    
+    
     $("#test").click( () => {
         //var totalK = 0;
 
         var distance = document.getElementById("type").value;
         console.log(distance);
-        console.log(totalK);
+        console.log("total k",totalK);
       
         
         var hour = document.getElementById("hour").value;
@@ -93,7 +98,11 @@ $(document).ready( () => {
         
         const    output = minu / (convertD(distance));
         
+        var totalM = totalK / 1.609;
         
+        const output2 = minu / totalM;
+        console.log(output2);
+        console.log(totalM);
         console.log(output);
         //document.getElementById("result").textContent = output;
         
@@ -107,7 +116,7 @@ $(document).ready( () => {
         let final = paceMinString + ":" + paceSecondString;//paceSM.concat(colon,paceS);
         
         document.getElementById("result").innerText = final;
-        
+        console.log(totalM, totalK);
         // add seconds
         
         
@@ -166,7 +175,7 @@ $(document).ready( () => {
             return totalK = 8;
         } else if (distance == "Half"){
             console.log("Half");
-            return totalK = 21.0975;
+            return totalK = 21.097;
         } else if (distance == "Marathon"){
             console.log("Marathon");
             return totalK = 42.195;
@@ -182,7 +191,10 @@ $(document).ready( () => {
         }else {
             $("#otherTxt").attr("disabled", "disabled");
         }
-                     
+            
+        
+        
+        
             });
     
     
