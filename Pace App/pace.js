@@ -110,17 +110,24 @@ $(document).ready( () => {
 		var paceSeconds = Math.round((output - paceMinutes) * 60);
         console.log(paceMinutes, paceSeconds);
         
+        var paceMinutes2 = Math.floor(output2);
+		var paceSeconds2 = Math.round((output2 - paceMinutes2) * 60);
+        console.log(paceMinutes2, paceSeconds2);        
+        
         let paceMinString = paceMinutes.toString();
         let paceSecondString = paceSeconds.toString();
         
-        let final = paceMinString + ":" + paceSecondString;//paceSM.concat(colon,paceS);
+        let paceMinString2 = paceMinutes2.toString();
+        let paceSecondString2 = paceSeconds2.toString();        
+        console.log(paceMinString2, paceSecondString2);
+        let final = paceMinString + ":" + paceSecondString +" and "+ paceMinString2 +":" +paceSecondString2;//paceSM.concat(colon,paceS);
         
         document.getElementById("result").innerText = final;
         console.log(totalM, totalK);
         // add seconds
         
         
-        
+        // do same thing 
         /*
         ----------------What's Left to Do----------------
         -Make user input
