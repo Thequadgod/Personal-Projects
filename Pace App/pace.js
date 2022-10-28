@@ -132,13 +132,15 @@ $(document).ready( () => {
         ----------------What's Left to Do----------------
         -Make user input
         -make per mile as well
-        -make it so you can press enter to calculate
+        -make it so you can press enter to calculate on the keyboard
         -make reset button
+        -Make leading 0's a thing (for example, using a 1:19 half givse 6:2 instead of 6:02 min per miles)
         
         
         
         -maybe add mph for paces
         -maybe integrate the mpw calculator too
+        -maybe have a 400/800/1600 time too
         
         */
         /*
