@@ -78,6 +78,12 @@ $(document).ready( () => {
     
     $("#test").click( () => {
 
+        
+        //if (("#otherTxt").val == null){
+          //  console.log("hi");
+        //} 
+        //console.log(otherTxt.value);
+        
         var distance = document.getElementById("type").value;
         console.log(distance);
         console.log("total k",totalK);
@@ -89,14 +95,17 @@ $(document).ready( () => {
         
         minu =  (hour * 60) + +minu;
         sec =   (minu * 60) + +sec;
-        console.log("minutes =",minu ,sec,hour);
+        
+        var minu2 =  (sec / 60);
+        console.log(minu2, "minu2")
+        console.log("minutes, seconds, hours =",minu ,sec,hour);
         
         
-        const    output = minu / (convertD(distance));
+        const    output = minu2 / (convertD(distance));
         
         var totalM = totalK / 1.609;
         
-        const output2 = minu / totalM;
+        const output2 = minu2 / totalM;
         console.log(output2);
         console.log(totalM);
         console.log(output);
@@ -186,7 +195,7 @@ $(document).ready( () => {
              
          }); // end calculate click listener
     
-    function ktom(diistance){
+    function ktom(distance){
         
     }
          function convertD(distance){
@@ -229,8 +238,8 @@ $(document).ready( () => {
         //console.log(testh);
         document.getElementById("hour").value = "1";
             
-        document.getElementById("minu").value = "19";
-        document.getElementById("sec").value  = "";
+        document.getElementById("minu").value = "29";
+        document.getElementById("sec").value  = "15";
         //document.getElementById("result").innerText = "";
         document.getElementById("type").value = "Half";    
             
