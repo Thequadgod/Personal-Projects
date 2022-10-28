@@ -124,6 +124,18 @@ $(document).ready( () => {
         
         document.getElementById("result").innerText = final;
         console.log(totalM, totalK);
+        
+            $("#reset").click( () => {
+                //sets reset button to normal values
+        document.getElementById("hour").value = "";
+        document.getElementById("minu").value = "";
+        document.getElementById("sec").value  = "";
+        document.getElementById("result").innerText = "";
+        document.getElementById("type").value = "";
+
+        
+        });// end click listener for reset button    
+    
         // add seconds
         
         
@@ -202,10 +214,9 @@ $(document).ready( () => {
         }
             
         
-        
-        
-            });
+            });// end click for calculate button
     
+
     
     /*
     if (isValid == false) {
