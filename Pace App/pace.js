@@ -76,11 +76,7 @@ $(document).ready( () => {
      
     
     
-    
-    
-    
     $("#test").click( () => {
-        //var totalK = 0;
 
         var distance = document.getElementById("type").value;
         console.log(distance);
@@ -108,24 +104,35 @@ $(document).ready( () => {
         
         var paceMinutes = Math.floor(output);
 		var paceSeconds = Math.round((output - paceMinutes) * 60);
-        console.log(paceMinutes, paceSeconds);
+        
+        console.log("Pace Minutes-",paceMinutes ,"Pace Seconds", paceSeconds);
         
         var paceMinutes2 = Math.floor(output2);
 		var paceSeconds2 = Math.round((output2 - paceMinutes2) * 60);
-        console.log(paceMinutes2, paceSeconds2);        
+        console.log("Pace Minutes2-",paceMinutes2,"Pace Seconds2", paceSeconds2);        
         
         let paceMinString = paceMinutes.toString();
         let paceSecondString = paceSeconds.toString();
         
+        if(paceSecondString < 10) {
+		paceSecondString = "0" + paceSecondString;
+	   }// end if
+        
         let paceMinString2 = paceMinutes2.toString();
-        let paceSecondString2 = paceSeconds2.toString();        
+        let paceSecondString2 = paceSeconds2.toString();
+        
+        if(paceSecondString2 < 10) {
+		paceSecondString2 = "0" + paceSecondString2;
+        }// end if
+        
         console.log(paceMinString2, paceSecondString2);
-        let final = paceMinString + ":" + paceSecondString +" and "+ paceMinString2 +":" +paceSecondString2;//paceSM.concat(colon,paceS);
+        
+        let final = paceMinString + ":" + paceSecondString +" Per Kilometer and "+ paceMinString2 +":" +paceSecondString2 +" Per Mile";//paceSM.concat(colon,paceS);
         
         document.getElementById("result").innerText = final;
         console.log(totalM, totalK);
         
-            $("#reset").click( () => {
+        $("#reset").click( () => {
                 //sets reset button to normal values
         document.getElementById("hour").value = "";
         document.getElementById("minu").value = "";
@@ -136,6 +143,8 @@ $(document).ready( () => {
         
         });// end click listener for reset button    
     
+        
+        
         // add seconds
         
         
@@ -174,10 +183,8 @@ $(document).ready( () => {
 
         //var total = +hour + +minu + +sec;
         
-     
-        //console.log(total);
-        
-         });   
+             
+         }); // end calculate click listener
     
     function ktom(diistance){
         
@@ -207,7 +214,7 @@ $(document).ready( () => {
     $("#type").click( () => {
         let distance = $("#type").val();
 
-        if ((distance) == "other"){
+        if ((distance) == "otherk" || (distance) == "otherm"){
                  $("#otherTxt").removeAttr("disabled");
         }else {
             $("#otherTxt").attr("disabled", "disabled");
@@ -216,7 +223,18 @@ $(document).ready( () => {
         
             });// end click for calculate button
     
-
+    $("#random").click( () => {
+            
+       //var testh = Math.random() * 10;
+        //console.log(testh);
+        document.getElementById("hour").value = "1";
+            
+        document.getElementById("minu").value = "19";
+        document.getElementById("sec").value  = "";
+        //document.getElementById("result").innerText = "";
+        document.getElementById("type").value = "Half";    
+            
+        });// end random
     
     /*
     if (isValid == false) {
